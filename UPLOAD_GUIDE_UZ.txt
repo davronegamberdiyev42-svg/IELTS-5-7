@@ -1,0 +1,26 @@
+IELTS BOOST — FINAL RELEASE 50.0.0 — GITHUB PAGES / SAMSUNG
+
+MUHIM REPOSITORY NOMI:
+DEPLOY_TARGET.txt hozir GitHub repo `unbelievable-8-` va URL `https://davronegamberdiyev42-svg.github.io/unbelievable-8-/` deb yozadi. Oldingi suhbatlarda `/Ielts-gooo/` URL ham tilga olingan. Yuklashdan oldin GitHub’dagi haqiqiy repository nomini tekshir. Manifest va Service Worker yo‘llari relative `./`, ya’ni project subpath uchun moslashuvchan; deploy target matnini ham haqiqiy repo bilan moslashtirish lozim.
+
+1. Eski platformani o‘chirib yuborma. Amaldagi saytda Settings → Export verified backup JSON orqali progress backup ol.
+2. Speaking Studio ichidagi muhim audio yozuvlarni alohida eksport qil: JSON backup IndexedDB audio bloblarini o‘z ichiga olmaydi.
+3. Final ZIP’ni yuklab ol va My Files → Downloads ichida Extract qil.
+4. GitHub’da yuqorida tekshirilgan repository’ni och.
+5. ZIP ichidagi barcha root fayl va papkalarni repository root’ga yukla: `index.html`, `assets/`, `data/`, `audio/`, `tools/`, `manifest.webmanifest`, `sw.js`, iconlar, `.nojekyll` va hujjatlar. ZIP faylning o‘zini yuklama; papka ichida qo‘shimcha wrapper folder yaratma.
+6. GitHub → Settings → Pages → Build and deployment → Deploy from a branch → `main` → `/(root)` → Save.
+7. GitHub Pages HTTPS deployment tugagach, aniq URL’ni Chrome’da och. Birinchi yuklanish uchun internet kerak.
+8. Settings → PWA install readiness → Check install readiness. Service Worker yangi shell’ni aktiv qilgach sahifani bir marta yangila. Eski audio cache nomi saqlangan.
+9. Stage 50 settings acceptance paneli va `STAGE50_MOBILE_ACCEPTANCE_UZ.md` bo‘yicha Samsung A14’da test qil.
+10. Eski local progressni tozalashdan oldin yangi versiya to‘g‘ri ishlashi va backup import/export tekshirilgan bo‘lsin.
+
+ANDROID / OFFLINE ESLATMA
+- PWA Install qarorini Chrome/Android beradi; sayt kodidan installni majburlab bo‘lmaydi.
+- Birinchi bor audio faylga kirilganda internet kerak; Service Worker audio’ni so‘ralgandan keyin cache qiladi.
+- Live transcript browser SpeechRecognition API va ko‘pincha internetga bog‘liq. U bo‘lmasa Manual Transcript yoki Samsung Keyboard/Gboard dictation’dan foydalan.
+- JSON backup audio yozuvlarini saqlamaydi; ularni alohida eksport qil.
+- SHA-256 integrity check; encryption emas.
+- Local data app tomonidan shifrlanmaydi va cloud sync qilinmaydi.
+
+BROWSER ACCEPTANCE
+Stage 50 build muhitida Chromium navigatsiyasi ERR_BLOCKED_BY_ADMINISTRATOR sabab to‘xtagan. Shuning uchun haqiqiy render acceptance’ni deployed HTTPS sahifada va Samsung A14’da bajarish shart.
